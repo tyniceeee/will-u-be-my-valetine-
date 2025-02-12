@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(240, 203, 226);
+            text-align: center;
+            font-family: 'Amatic SC', cursive;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+        }
+        h2 {
+            color: rgb(173, 37, 37);
+            margin: 10px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            max-height: 50vh;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Amatic SC', cursive;
+        }
+        .yes-button {
+            background-color: #4CAF50;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .no-button {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        /* Hide GIF initially */
+        #happyGif {
+            display: none;
+            margin-top: 20px;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MEOW MEOW</h1>
+    <h2>To my beloved pookie wookie baby girl, may I, your pookie wookie yang yang, be your first valentine on 14 February 2025</h2>
+    
+    <div class="image-container">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTI4ajRvOHMxdHRxYmpncHN1N2t2d3phd3h6bnZyYjY3Ymk1MzBwYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c76IJLufpNwSULPk77/giphy.gif" width="250" height="300">
+    </div>
+    
+    <p>pretty pls</p>
+    <p>pls pls</p>
+    
+    <div class="buttons">
+        <button class="yes-button" id="yesBtn" onclick="yesClicked()">Yes</button>
+        <button class="no-button" onclick="growYesButton()">No</button>
+    </div>
+
+    <!-- Happy GIF (Initially hidden) -->
+    <img id="happyGif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDY0NGRteXdpeGZkNDEyc3UxcnF3OWV1dW1vbXRsYWp0aDA3emF6bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QEN54dmAJuTF0wBWXz/giphy.gif" alt="Happy GIF">
+
+    <script>
+        let size = 16; // Initial font size in pixels
+
+        function growYesButton() {
+            size *= 1.5; // Increase size exponentially
+            let yesButton = document.getElementById("yesBtn");
+            yesButton.style.fontSize = size + "px";
+            yesButton.style.padding = (size / 2) + "px";
+            if (size > window.innerWidth) {
+                yesButton.style.width = "100vw";
+                yesButton.style.height = "100vh";
+            }
+        }
+
+        function yesClicked() {
+            alert('YAYYYYYYYYYYYYYYYYYYYYYYYYYY! ❤️');
+
+            // Show the GIF
+            document.getElementById("happyGif").style.display = "block";
+        }
+    </script>
+</body>
+</html>
